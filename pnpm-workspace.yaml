@@ -1,0 +1,28 @@
+# pnpm 12 requires an explicit decision for dependency build scripts.
+# None are needed: onnxruntime-node bundles the CPU binaries (its postinstall
+# only fetches CUDA files), and esbuild/protobufjs work from prebuilt packages.
+allowBuilds:
+  esbuild: false
+  onnxruntime-node: false
+  protobufjs: false
+minimumReleaseAgeExclude:
+  - '@oxlint/binding-android-arm-eabi@1.86.0'
+  - '@oxlint/binding-android-arm64@1.86.0'
+  - '@oxlint/binding-darwin-arm64@1.86.0'
+  - '@oxlint/binding-darwin-x64@1.86.0'
+  - '@oxlint/binding-freebsd-x64@1.86.0'
+  - '@oxlint/binding-linux-arm-gnueabihf@1.86.0'
+  - '@oxlint/binding-linux-arm-musleabihf@1.86.0'
+  - '@oxlint/binding-linux-arm64-gnu@1.86.0'
+  - '@oxlint/binding-linux-arm64-musl@1.86.0'
+  - '@oxlint/binding-linux-ppc64-gnu@1.86.0'
+  - '@oxlint/binding-linux-riscv64-gnu@1.86.0'
+  - '@oxlint/binding-linux-riscv64-musl@1.86.0'
+  - '@oxlint/binding-linux-s390x-gnu@1.86.0'
+  - '@oxlint/binding-linux-x64-gnu@1.86.0'
+  - '@oxlint/binding-linux-x64-musl@1.86.0'
+  - '@oxlint/binding-openharmony-arm64@1.86.0'
+  - '@oxlint/binding-win32-arm64-msvc@1.86.0'
+  - '@oxlint/binding-win32-ia32-msvc@1.86.0'
+  - '@oxlint/binding-win32-x64-msvc@1.86.0'
+  - oxlint@1.86.0
